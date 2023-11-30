@@ -1,0 +1,138 @@
+.modal__controler{
+    max-width: 350px;
+
+    font-family: var(--font-family-1);
+
+    border: none;
+
+    border-radius: var(--radius-1);
+
+    animation: caindo 0.6s;
+}
+.modal__container{
+    width: 100%;
+}
+.header__modal{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 1.4rem;
+}
+.header__modal h1{
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+}
+.header__modal p{
+    font-weight: var(--font-weight-2);
+    
+    background-color: var(--color-grey-5);
+    
+    padding: .3rem;
+
+    border-radius: var(--radius-2);
+}
+.modal__container > p{
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-3);
+
+    color: var(--color-grey-2);
+
+    margin-bottom: 1.4rem;
+}
+.modal__container form{
+
+}
+.modal__container form .value{
+    display: flex;
+    flex-direction: column;
+}
+.modal__container form .value > label{
+    font-weight: var(--font-weight-2);
+    margin-bottom: .3rem;
+}
+.modal__container form .value > input{
+    height: 1.6rem;
+
+    border: 2px solid var(--color-grey-4);
+    border-radius: var(--radius-2);
+}
+.modal__container form .value > input::placeholder{
+    font-size: var(--font-size-3);
+}
+.categorias{
+    margin-top: 1.4rem;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.4rem;
+}
+.categorias label{
+    text-align: center;
+    
+    padding: .4rem;
+
+    border-radius: var(--radius-1);
+    border: 2px solid var(--color-grey-5);
+
+    color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+.categorias label:hover{
+    color: var(--color-brand-1);
+    border: 2px solid var(--color-brand-1);
+}
+.categorias label:focus-within{
+    color: var(--color-brand-1);
+    border: 2px solid var(--color-brand-1);
+}
+.categorias input{
+    display: none;
+}
+.enviar{
+    display: flex;
+    justify-content: end;
+    margin-top: 1.6rem;
+
+    gap: 1rem;
+}
+.enviar button{
+    padding: .4rem;
+    padding-inline: .6rem;
+
+    background-color: var(--color-grey-4);
+
+    border: none;
+    
+    border-radius: var(--radius-1);
+}
+.enviar .cancelar{
+    cursor: pointer;
+}
+.enviar .cancelar:hover{
+    background-color: var(--color-brand-2);
+
+    color: var(--fixed-white);
+}
+.enviar .inserir{
+    background-color: var(--color-brand-1);
+    
+    color: var(--fixed-white);
+
+    cursor: pointer;
+}
+.enviar .inserir:hover{
+    background-color: var(--color-brand-2);
+}
+
+@keyframes caindo {
+    0%{
+        position: relative;
+
+        bottom: 200%;
+    }
+    100%{
+        position: fixed;
+    }
+}

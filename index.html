@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Finance</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/filtros.css">
+    <link rel="stylesheet" href="src/styles/records.css">
+    <link rel="stylesheet" href="src/styles/valueAll.css">
+    <link rel="stylesheet" href="src/styles/modal.css">
+    <link rel="stylesheet" href="src/styles/emptyRecords.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <h1><span>Control</span> finance</h1>
+        <button class="modal__open">Registrar novo valor</button>
+      </div>
+    </header>
+    <main id="app">
+      <section class="section__filter">
+        <div class="filter__container">
+          <h2>Resumo financeiro</h2>
+          <div class="buttons__filter">
+            <button id="todos" class="todos filter">Tosos</button>
+            <button id="0" class="entradas filter">Entradas</button>
+            <button id="1" class="saidas filter">Saídas</button>
+          </div>
+        </div>
+      </section>
+      <section class="value-sum">
+        <div class="value-sum__container">
+          <h2>Soma dos valores</h2>
+          <span id="sum">R$ 100</span>
+        </div>
+      </section>
+      <section class="section__records">
+        <ul class="records__container">
+          <li class="record">
+            <span>valor</span>
+            <div>
+              <p>Entrada/saida</p>
+              <button>Lixeira</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="empty__controler">
+        <div class="empty__container">
+          <h2>Nenhum valor cadastrado</h2>
+          <p>Registrar novo Valor</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal__controler">
+      <div class="modal__container">
+        <div class="header__modal">
+          <h1>Registro de valor</h1>
+          <p class="fechar">x</p>
+        </div>
+        <p>Digite o valor e em seguida aperte o botão referente ao tipo do valor</p>
+        <form action="">
+          <div class="value">
+            <label for="value">Valor</label>
+            <input id="valor" class="form" placeholder="R$ 00,00" name="value" type="number">
+          </div>
+          <div class="categorias">
+            <p>Tipo de valor:</p>
+            <label class="entrada" for="entrada">Entrada</label>
+            <input value="0" class="form category" id="entrada" name="categoryID" type="radio">
+            <label class="saida" for="saida">saida</label>
+            <input value="1" class="form category" placeholder="saida" id="saida" name="categoryID" type="radio">
+          </div>
+          <div class="enviar">
+            <button class="cancelar fechar">Cancelar</button>
+            <button class="inserir">Inserir valor</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <script src="./src/scripts/modal.js"></script>
+    <script src="./src/scripts/valuesData.js"></script>
+    <script type='module' src="./src/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+.value-sum{
+    margin-top: 2.5rem;
+}
+.value-sum__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    background-color: var(--color-grey-3);
+    height: 2.5rem;
+    padding-inline: 0.8rem;
+
+    border-radius: var(--radius-2);
+}
+.value-sum__container h2{
+    font-size: var(--font-size-2);
+}
+.value-sum__container span{
+
+}
+
+@media(max-width: 700px){
+    .value-sum{
+        margin: 2.5rem 1.4rem;
+    }
+}
